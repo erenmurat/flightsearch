@@ -11,8 +11,8 @@ public interface IPriceService {
 
 	public void savePrice(Price price);
 
- 
-	public Price findPrice(Flight flight) throws NotFoundException;
+ 	public Price findPrice(Flight flight) throws NotFoundException;
+	
 	public List<Price> findAllPrices() throws NotFoundException;
 	
 	public Price findPrice(LocalDate departureDate, String flightNumber) throws NotFoundException;

@@ -46,24 +46,21 @@ public class FlightsearchApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Flight f1 = new Flight();
- 
-		 
+
 		Calendar flightDate = Calendar.getInstance();
 		flightDate.set(2022, 03, 02, 19, 30, 0);
- 	        
+
 		f1.setFlightDate(flightDate.getTime());
 		f1.setArrrivalAirport("SAW");
 		f1.setDepartureAirport("BAE");
 		f1.setFlightNumber("TZ2020");
-		f1.setFlightTime( Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()));
+		f1.setFlightTime(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()));
 
 		Price p1 = new Price();
 		p1.setAmount(1000);
 		p1.setCurrency("EUR");
 		p1.setFlight(f1);
-		// f1.setPrice(p1);
 
-		// pRepo.save(p1);
 		fRepo.saveFlight(f1);
 		pRepo.savePrice(p1);
 

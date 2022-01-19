@@ -23,15 +23,11 @@ public class PriceServiceImpl implements IPriceService {
 
 	}
 
-	 
-
 	@Override
 	public List<Price> findAllPrices() throws NotFoundException {
 
 		return priceRepo.getAllPrices();
 	}
-
-
 
 	@Override
 	public Price findPrice(Flight flight) throws NotFoundException {
@@ -39,12 +35,9 @@ public class PriceServiceImpl implements IPriceService {
 		return null;
 	}
 
-
-
-	@Override
+    @Override
 	public Price findPrice(LocalDate departureDate, String flightNumber) throws NotFoundException {
 		return priceRepo.findPrice(flightNumber, departureDate);
 		
 	}
-
 }

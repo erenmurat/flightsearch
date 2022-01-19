@@ -20,7 +20,6 @@ public final class DateUtil {
 	public static synchronized LocalDate getLocalDateYYYYMMDD(String date) {
 		return LocalDate.parse(date, formatteryyyyMMdd);
 	}
-
 	
 	public static synchronized Date getDateFromLocalDate(LocalDate localDate) {
 		Date d = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
